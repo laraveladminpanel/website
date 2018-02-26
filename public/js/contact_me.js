@@ -504,9 +504,9 @@ $(function () {
       event.preventDefault(); // prevent default submit behaviour
       // get values from FORM
       var name = $("input#name").val();
-      var email = $("input#email").val();
-      var phone = $("input#phone").val();
-      var message = $("textarea#message").val();
+      /*      var email = $("input#email").val();
+            var phone = $("input#phone").val();
+            var message = $("textarea#message").val();*/
       var firstName = name; // For Success/Failure Message
       // Check for white space in name for Success/Fail message
       if (firstName.indexOf(' ') >= 0) {
@@ -514,15 +514,13 @@ $(function () {
       }
       $this = $("#sendMessageButton");
       $this.prop("disabled", true); // Disable submit button until AJAX call is complete to prevent duplicate messages
+      $contactForm = $('#contactForm');
+      $url = $contactForm.attr('action');
+
       $.ajax({
-        url: "././mail/contact_me.php",
+        url: $url,
         type: "POST",
-        data: {
-          name: name,
-          phone: phone,
-          email: email,
-          message: message
-        },
+        data: $contactForm.serialize(),
         cache: false,
         success: function success() {
           // Success message
@@ -531,7 +529,7 @@ $(function () {
           $('#success > .alert-success').append("<strong>Your message has been sent. </strong>");
           $('#success > .alert-success').append('</div>');
           //clear all fields
-          $('#contactForm').trigger("reset");
+          $contactForm.trigger("reset");
         },
         error: function error() {
           // Fail message
@@ -540,7 +538,7 @@ $(function () {
           $('#success > .alert-danger').append($("<strong>").text("Sorry " + firstName + ", it seems that my mail server is not responding. Please try again later!"));
           $('#success > .alert-danger').append('</div>');
           //clear all fields
-          $('#contactForm').trigger("reset");
+          $contactForm.trigger("reset");
         },
         complete: function complete() {
           setTimeout(function () {

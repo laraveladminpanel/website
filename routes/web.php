@@ -14,3 +14,5 @@
 Route::get('/', function () {
     return view('index');
 });
+
+Route::post('send-mail', 'HomeController@sendMail')->name('send-mail');
