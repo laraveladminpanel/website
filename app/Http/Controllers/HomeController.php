@@ -20,6 +20,6 @@ class HomeController extends Controller
                 ->to('aleksey.kostenko.dev@gmail.com')->cc('canal@i.ua');
         });
 
-        return true;
+        return 'true';
     }
 }
