@@ -16,3 +16,9 @@ Route::get('/', function () {
 });
 
 Route::post('send-mail', 'HomeController@sendMail')->name('send-mail');
+
+Route::get('docs', 'DocsController@index')->name('docs');
+
+Route::group(['prefix' => 'admin'], function () {
+    Admin::routes();
+});
