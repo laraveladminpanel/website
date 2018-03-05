@@ -15,6 +15,10 @@ class CreateDocVersionsTable extends Migration
     {
         Schema::create('doc_versions', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('name', 10);
+            $table->string('code', 40)->nullable();
+            $table->integer('doc_version_type_id')->unsigned();
+            $table->foreign('doc_version_type_id')->references('id')->on('doc_version_types')->onUpdate('cascade')->onDelete('cascade');
             $table->timestamps();
         });
     }

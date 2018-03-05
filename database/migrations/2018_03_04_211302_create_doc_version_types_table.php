@@ -15,6 +15,7 @@ class CreateDocVersionTypesTable extends Migration
     {
         Schema::create('doc_version_types', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('name', 20);
             $table->timestamps();
         });
     }
