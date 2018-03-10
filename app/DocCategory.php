@@ -19,18 +19,35 @@ class DocCategory extends Model
         return $this->belongsTo(DocCategory::class, 'parent_id');
     }
 
+    public function version()
+    {
+        return $this->belongsTo(DocVersion::class, 'doc_version_id');
+    }
+
     public function parentId()
     {
         return $this->parent();
     }
 
-    public function version()
+    public function parentIdList()
     {
-        return $this->belongsTo(DocVersion::class);
+        return $this->adminList()->get();
     }
 
     public function docVersionId()
     {
         return $this->version();
     }
+
+    public function adminList()
+    {
+        return $this->whereHas('version', function($query){
+            $query->whereName(request('v'));
+        });
+    }
+
+/*    public function docVersionIdList()
+    {
+        return $this->version();
+    }*/
 }

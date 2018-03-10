@@ -21,4 +21,20 @@ class DocVersion extends Model
     {
         return $this->hasMany(DocPage::class);
     }
+
+    /**
+     * Get the version type.
+     */
+    public function docVersionTypeId()
+    {
+        return $this->belongsTo(DocVersionType::class);
+    }
+
+    /**
+     * Get the version type.
+     */
+    public function versionType()
+    {
+        return $this->docVersionTypeId();
+    }
 }
