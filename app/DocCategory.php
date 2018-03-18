@@ -39,12 +39,12 @@ class DocCategory extends Model
         return $this->version();
     }
 
-    public function adminList()
+/*    public function adminList()
     {
         return $this->whereHas('version', function($query){
             $query->whereName(request('v'));
         });
-    }
+    }*/
 
 /*    public function docVersionIdList()
     {

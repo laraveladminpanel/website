@@ -17,7 +17,12 @@ Route::get('/', function () {
 
 Route::post('send-mail', 'HomeController@sendMail')->name('send-mail');
 
-Route::get('docs', 'DocsController@index')->name('docs');
+Route::get('/docs', function () {
+    return redirect()->route('docVersion', ['version' => '0.1']);
+})->name('docs');
+
+Route::get('docs/{version}', 'DocController@version')->name('docVersion');
+Route::get('docs/{version}/{slug}', 'DocController@page')->name('docVersionPage');
 
 Route::group(['prefix' => 'admin'], function () {
     Admin::routes();
