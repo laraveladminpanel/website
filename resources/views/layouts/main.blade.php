@@ -24,13 +24,8 @@
 
   <body id="page-top">
     @include('layouts.main.nav')
-    @include('layouts.main.header')
     @yield('content')
     @include('layouts.main.footer')
-
-    <!-- Custom scripts for this template -->
-    <script src="{{ mix('js/app.js') }}"></script>
-
     @yield('scripts')
   </body>
 </html>

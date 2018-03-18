@@ -1,5 +1,5 @@
 <!-- Navigation -->
-<nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top {{ 'navbar-shrink' }}" id="mainNav">
   <div class="container">
     <a class="navbar-brand js-scroll-trigger text-uppercase" href="#page-top">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 57.6">
