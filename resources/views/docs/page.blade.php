@@ -1,25 +1,28 @@
-@extends('layouts.layout')
+@extends('docs.master')
+
+@section('page_title', __('admin.generic.view') . ' ' . 'page_title')
+
+@section('page_header')
+    <h1 class="page-title">
+        <i class="icon"></i> display_name_singular &nbsp;
+    </h1>
+@stop
 
 @section('content')
-<section>
-  <nav>
-      <ul class="nav">
-        <li><a href="#">Link 1</a></li>
-      <li><a href="#" id="btn-1" data-toggle="collapse" data-target="#submenu1" aria-expanded="false">Link 2 (toggle)</a>
-        <ul class="nav collapse" id="submenu1" role="menu" aria-labelledby="btn-1">
-          <li><a href="#">Link 2.1</a></li>
-          <li><a href="#">Link 2.2</a></li>
-          <li><a href="#">Link 2.3</a></li>
-        </ul>
-      </li>
-      <li><a href="#">Link 3</a></li>
-      <li><a href="#">Link 4</a></li>
-    </ul>
-  </nav>
-  <div class="container">
-    <h2>Navbar Forms</h2>
-    <p>Use the .navbar-form class to vertically align form elements (same padding as links) inside the navbar.</p>
-  </div>
-</section>
+    <div class="page-content read container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="panel panel-bordered" style="padding-bottom:5px;">
+                    <div class="panel-heading" style="border-bottom:0;">
+                        <h3 class="panel-title">title</h3>
+                    </div>
 
-@endsection
+                    <div class="panel-body" style="padding-top:0;">
+                      {!! $page->body !!}
+                    </div><!-- panel-body -->
+                </div>
+            </div>
+        </div>
+    </div>
+@stop
+
