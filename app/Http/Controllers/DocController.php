@@ -12,7 +12,7 @@ class DocController extends Controller
         $version = DocVersion::whereName($version)
             ->firstOrFail();
 
-        return $version;
+        return view('docs.version', compact('version'));
     }
 
     public function page($version, $slug)
@@ -24,6 +24,6 @@ class DocController extends Controller
             ->whereSlug($slug)
             ->firstOrFail();
 
-        return $page;
+        return view('docs.page', compact('page'));
     }
 }

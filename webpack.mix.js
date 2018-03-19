@@ -17,11 +17,12 @@ let mix = require('laravel-mix');
 mix.sass('node_modules/bootstrap/scss/bootstrap.scss', 'public/vendor/css')
 	.copy('node_modules/font-awesome/fonts', 'public/vendor/fonts')
 	.sass('node_modules/font-awesome/scss/font-awesome.scss', 'public/vendor/css')
-    .sass('resources/assets/sass/app.scss', 'public/css')
-    .options({
+  .sass('resources/assets/sass/main/app.scss', 'public/main/css')
+  .sass('resources/assets/sass/app.scss', 'public/css')
+  .options({
       processCssUrls: false
-    })
-    .js('resources/assets/js/app.js', 'public/js')
-    .js('resources/assets/js/jqBootstrapValidation.js', 'public/vendor/js')
-    .js('resources/assets/js/contact_me.js', 'public/js');
+  })
+  .js('resources/assets/js/app.js', 'public/js')
+  .js('resources/assets/js/jqBootstrapValidation.js', 'public/vendor/js')
+  .js('resources/assets/js/contact_me.js', 'public/js');
 mix.version();
