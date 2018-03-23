@@ -23,9 +23,9 @@
   </head>
 
   <body id="page-top">
-    @include('layouts.main.nav')
+    {{ menu('main', 'layouts.main.nav') }}
     @yield('content')
-    @include('layouts.main.footer')
+    {{ menu('footer', 'layouts.main.footer') }}
     @yield('scripts')
   </body>
 </html>

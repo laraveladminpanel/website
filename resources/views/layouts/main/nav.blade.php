@@ -14,34 +14,11 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav text-uppercase ml-auto">
-        <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="#services">Services</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="#portfolio">Screenshots</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" target="_blank" href="http://demo.laraveladminpanel.com/">Demo</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" target="_blank" href="https://voyager.readme.io/docs">Docs</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" target="_blank" href="https://github.com/laraveladminpanel/admin">Github</a>
-        </li>
-        @php
-        /*
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#about">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#team">Team</a>
-          </li>
-        */
-        @endphp
-        <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
-        </li>
+        @foreach($items as $menu_item)
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="{{ $menu_item->link() }}" target="{{ $menu_item->target }}">{{ $menu_item->title }}</a>
+            </li>
+        @endforeach
       </ul>
     </div>
   </div>

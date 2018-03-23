@@ -30,15 +30,11 @@
       @endphp
       <div class="col-md-6">
         <ul class="list-inline quicklinks">
-          <li class="list-inline-item">
-            <a target="_blank" href="http://demo.laraveladminpanel.com/">Demo</a>
-          </li>
-          <li class="list-inline-item">
-            <a target="_blank" href="https://voyager.readme.io/docs">Docs</a>
-          </li>
-          <li class="list-inline-item">
-            <a target="_blank" href="https://github.com/laraveladminpanel/admin">Github</a>
-          </li>
+          @foreach($items as $menu_item)
+              <li class="list-inline-item">
+                <a href="{{ $menu_item->link() }}" target="{{ $menu_item->target }}">{{ $menu_item->title }}</a>
+              </li>
+          @endforeach
         </ul>
       </div>
     </div>
