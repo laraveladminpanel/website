@@ -1,5 +1,5 @@
 <!-- Portfolio Grid -->
-<section class="bg-light" id="portfolio">
+<section class="bg-light" id="screenshots">
   <div class="container">
     <div class="row">
       <div class="col-lg-12 text-center">
@@ -15,7 +15,7 @@
               <i class="fa fa-plus fa-3x"></i>
             </div>
           </div>
-          <img class="img-fluid" src="img/screenshots/crud.jpg" alt="">
+          <img class="img-fluid" src="/img/screenshots/crud.jpg" alt="">
         </a>
         <div class="portfolio-caption">
           <h4>CRUD</h4>
@@ -29,7 +29,7 @@
               <i class="fa fa-plus fa-3x"></i>
             </div>
           </div>
-          <img class="img-fluid" src="img/screenshots/edit-role.jpg" alt="">
+          <img class="img-fluid" src="/img/screenshots/edit-role.jpg" alt="">
         </a>
         <div class="portfolio-caption">
           <h4>Role</h4>
@@ -43,7 +43,7 @@
               <i class="fa fa-plus fa-3x"></i>
             </div>
           </div>
-          <img class="img-fluid" src="img/screenshots/media.jpg" alt="">
+          <img class="img-fluid" src="/img/screenshots/media.jpg" alt="">
         </a>
         <div class="portfolio-caption">
           <h4>Media</h4>
@@ -57,7 +57,7 @@
               <i class="fa fa-plus fa-3x"></i>
             </div>
           </div>
-          <img class="img-fluid" src="img/screenshots/menu.jpg" alt="">
+          <img class="img-fluid" src="/img/screenshots/menu.jpg" alt="">
         </a>
         <div class="portfolio-caption">
           <h4>Menu</h4>
@@ -71,7 +71,7 @@
               <i class="fa fa-plus fa-3x"></i>
             </div>
           </div>
-          <img class="img-fluid" src="img/screenshots/posts.jpg" alt="">
+          <img class="img-fluid" src="/img/screenshots/posts.jpg" alt="">
         </a>
         <div class="portfolio-caption">
           <h4>Posts</h4>
@@ -85,7 +85,7 @@
               <i class="fa fa-plus fa-3x"></i>
             </div>
           </div>
-          <img class="img-fluid" src="img/screenshots/roles.jpg" alt="">
+          <img class="img-fluid" src="/img/screenshots/roles.jpg" alt="">
         </a>
         <div class="portfolio-caption">
           <h4>Roles</h4>
@@ -115,7 +115,7 @@
               <h2 class="text-uppercase">CRUD</h2>
               <p class="item-intro text-muted">Creating CRUD</p>
               <a target="_blank" href="http://demo.laraveladminpanel.com/admin/database">
-                <img class="img-fluid d-block mx-auto" src="img/screenshots/crud.png" alt="">
+                <img class="img-fluid d-block mx-auto" src="/img/screenshots/crud.png" alt="">
               </a>
               <!--p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
               <ul class="list-inline">
@@ -151,7 +151,7 @@
               <h2 class="text-uppercase">Role</h2>
               <p class="item-intro text-muted">Role Management</p>
               <a target="_blank" href="http://demo.laraveladminpanel.com/admin/roles/1/edit">
-                <img class="img-fluid d-block mx-auto" src="img/screenshots/edit-role.png" alt="">
+                <img class="img-fluid d-block mx-auto" src="/img/screenshots/edit-role.png" alt="">
               </a>
             </div>
           </div>
@@ -177,7 +177,7 @@
               <h2 class="text-uppercase">Media</h2>
               <p class="item-intro text-muted">File manager</p>
               <a target="_blank" href="http://demo.laraveladminpanel.com/admin/media">
-                <img class="img-fluid d-block mx-auto" src="img/screenshots/media.png" alt="">
+                <img class="img-fluid d-block mx-auto" src="/img/screenshots/media.png" alt="">
               </a>
             </div>
           </div>
@@ -203,9 +203,8 @@
               <!-- Project Details Go Here -->
               <h2 class="text-uppercase">Menu</h2>
               <p class="item-intro text-muted">Menu Builder</p>
-              <img class="img-fluid d-block mx-auto" src="img/screenshots/menu.png" alt="">
               <a target="_blank" href="http://demo.laraveladminpanel.com/admin/menus/1/builder">
-                <img class="img-fluid d-block mx-auto" src="img/screenshots/media.png" alt="">
+                <img class="img-fluid d-block mx-auto" src="/img/screenshots/menu.png" alt="">
               </a>
             </div>
           </div>
@@ -231,7 +230,7 @@
               <h2 class="text-uppercase">Posts</h2>
               <p class="item-intro text-muted">Posts edit</p>
               <a target="_blank" href="http://demo.laraveladminpanel.com/admin/posts">
-                <img class="img-fluid d-block mx-auto" src="img/screenshots/posts.png" alt="">
+                <img class="img-fluid d-block mx-auto" src="/img/screenshots/posts.png" alt="">
               </a>
             </div>
           </div>
@@ -257,7 +256,7 @@
               <h2 class="text-uppercase">Roles</h2>
               <p class="item-intro text-muted">Creating Roles</p>
               <a target="_blank" href="http://demo.laraveladminpanel.com/admin/roles">
-                <img class="img-fluid d-block mx-auto" src="img/screenshots/roles.png" alt="">
+                <img class="img-fluid d-block mx-auto" src="/img/screenshots/roles.png" alt="">
               </a>
             </div>
           </div>

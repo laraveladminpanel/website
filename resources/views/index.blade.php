@@ -3,7 +3,7 @@
 @section('content')
   @include('layouts.main.header')
   @include('index.services')
-  @include('index.portfolio')
+  @include('index.screenshots')
   @include('index.about')
   @include('index.team')
   @include('index.clients')
