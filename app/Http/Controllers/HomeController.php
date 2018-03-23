@@ -15,9 +15,10 @@ class HomeController extends Controller
             'message' => 'required|string',
         ]);
 
-        \Mail::raw($request->message , function ($message) use($request) {
+        \Mail::raw($request->message, function ($message) use($request) {
             $message->from($request->email, $request->name)
-                ->to('aleksey.kostenko.dev@gmail.com')->cc('canal@i.ua');
+                ->to(env('MAIL_EMAIL'))
+                ->subject('Support message');
         });
 
         return 'true';

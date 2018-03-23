@@ -11,8 +11,9 @@
 @endsection
 
 @section('scripts')
-      <!-- Custom scripts for this template -->
-    <script src="{{ mix('js/app.js') }}"></script>
+  <!-- Custom scripts for this template -->
+  <script src="{{ mix('js/app.js') }}"></script>
+
   <!-- Contact form JavaScript -->
   <script src="{{ mix('vendor/js/jqBootstrapValidation.js') }}"></script>
 
