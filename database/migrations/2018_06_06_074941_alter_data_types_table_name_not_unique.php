@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateDocVersionTypesTable extends Migration
+class AlterDataTypesTableNameNotUnique extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,8 @@ class CreateDocVersionTypesTable extends Migration
      */
     public function up()
     {
-        Schema::create('doc_version_types', function (Blueprint $table) {
-            $table->increments('id');
-            $table->string('name', 20);
-            $table->timestamps();
+        Schema::table('data_types', function (Blueprint $table) {
+            $table->dropUnique('data_types_name_unique');
         });
     }
 
@@ -27,6 +25,8 @@ class CreateDocVersionTypesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('doc_version_types');
+        Schema::table('data_types', function (Blueprint $table) {
+            $table->unique('name');
+        });
     }
 }

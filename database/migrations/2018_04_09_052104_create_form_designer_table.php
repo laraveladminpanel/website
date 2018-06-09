@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateDocAnnouncementsTable extends Migration
+class CreateFormDesignerTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,13 @@ class CreateDocAnnouncementsTable extends Migration
      */
     public function up()
     {
-        Schema::create('doc_announcements', function (Blueprint $table) {
+        Schema::create('form_designer', function (Blueprint $table) {
             $table->increments('id');
-            $table->timestamps();
+            $table->integer('data_type_id')->unsigned()->nullable();
+            $table->text('options');
+
+            $table->foreign('data_type_id')->references('id')->on('data_types')
+                ->onDelete('set null');
         });
     }
 
@@ -26,6 +30,6 @@ class CreateDocAnnouncementsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('doc_announcements');
+        Schema::dropIfExists('form_designer');
     }
 }
