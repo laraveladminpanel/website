@@ -14,7 +14,7 @@ class HomeController extends Controller
             'message' => 'required|string',
         ]);
 
-        \Mail::raw($request->message, function ($message) use($request) {
+        \Mail::raw($request->message . "\n" . $request->phone, function ($message) use($request) {
             $message->from($request->email, $request->name)
                 ->to(env('MAIL_EMAIL'))
                 ->subject('Support message');
