@@ -19,8 +19,8 @@ class PermissionsTableSeeder extends Seeder
 
         foreach ($keys as $key) {
             Permission::firstOrCreate([
-                'key'        => $key,
-                'table_name' => null,
+                'key'  => $key,
+                'slug' => null,
             ]);
         }
 
@@ -37,5 +37,8 @@ class PermissionsTableSeeder extends Seeder
         Permission::generateFor('categories');
 
         Permission::generateFor('settings');
+
+        Permission::generateFor('form-designer');
+        Permission::removeFrom('form_designer');
     }
 }
